@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent () }} | Reserver{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('reservation') }}
+{% endblock %}
+
+{% block body %}
+    <section class="reservation">
+        {% if app.user %}
+        <div class="container">
+            <h1 class="text-primary text-center reveal-1">Réservation </h1>
+            {{form_start(form)}}
+            {{ form_widget(form) }}
+            <button class="btn btn-primary reveal-2">Réserver</button>
+            {{ form_end(form) }}
+        </div>
+        {% else %}
+            <div class="container">
+            <h2 class="text-center text-primary mt-5 reveal-1">Vous devez être connecté pour pouvoir effectuer une reservation <a class="btn btn-outline-primary" href="{{ path("app_login") }}"> 👉🏻 Connexion</a> </h2>
+                <p class="text-center reveal-2 ">Vous n'avez pas encore de compte ? Créez en un dès maintenant en cliquant  👉🏻<a class="badge badge-primary ml-2 px-2 py-2" href="{{ path('app_register') }}">ICI</a> </p>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Gallerie Photo {% endblock %}
+
+{% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('gallery') }}{% endblock %}
+
+{% block body %}
+    <section class="gallery">
+        <h1 class="text-primary text-center mb-5 reveal-1">Gallerie photo du show</h1>
+        <div class="container photos mb-5 reveal-2">
+           <img src="https://previews.123rf.com/images/lcchew/lcchew1702/lcchew170200213/72720947-performances-acrobatiques-et-de-cirque-%C3%A0-guilin-en-chine-.jpg" alt="cerceaux">
+            <img src="https://www.festival-cirquetours.fr/wp-content/uploads/2019/04/Cavalerie-3.jpg" alt="cheval">
+            <img src="https://www.spectaclesdenoel.com/images/guide/produits/2014-08/cirqueclown1-102345.jpg" alt="clown">
+            <img src="https://www.cirquededemain.paris/uploads/100_2010-duo-maintenant-photo-gerard-cardoso.jpg" alt="duo">
+            <img src="https://i.ytimg.com/vi/zjzhoj45FAA/hqdefault.jpg" alt="motos">
+            <img src="https://www.lemmens-cables.be/media/Baches_et_chapiteaux/Chapiteau_de_cirque/Chapiteau_de_cirque_Lemmens_1.jpg" alt="chapiteau">
+            <img src="http://reinformation.tv/wp-content/uploads/2018/04/Dernier-Dompteur-Anglais-Interdit-Cirque-Lions-Tigre-e1523971258219.jpg" alt="lion">
+            <img src="https://fyooyzbm.filerobot.com/v7/https://static01.nicematin.com/media/npo/mobile_1440w/2019/01/image-monxxq216_cd_open-door-circus-show.jpg" alt="lions">
+            <img src="https://img.20mn.fr/SSYJRnSVSJmMln-Jg_DdqQ/830x532_bordeaux-13-janvier-2012-les-coulisses-du-cirque-arlette-gruss-photo-sebastien-ortola.jpg" alt="dompt">
+            <img src="https://c8.alamy.com/compfr/j0jcbk/la-billetterie-et-big-top-tente-du-cirque-wonderland-j0jcbk.jpg" alt="billeterie">
+            <img src="https://www.cirque-gruss.com/wp-content/uploads/bb-plugin/cache/foule-public-groupe-cirque-arlette-gruss-panorama.jpg" alt="tribune">
+            <img src="https://i.ytimg.com/vi/jr3bYgYu-CI/maxresdefault.jpg" alt="backstage">
+            <img src="http://www.evenis.fr/img/artistes/artiste-monocycle-jongleur-04.jpg" alt="jongleur">
+            <img src="https://www.sortiraparis.com/images/64/88384/503596-le-cirque-phenix-presente-nomade-le-spectacle-des-etoiles-du-cirque-de-mongolie.jpg" alt="show">
+            <img src="https://www.sortiraparis.com/images/80/88654/502504-defi-le-spectacle-du-cirque-d-hiver-les-photos-7.jpg" alt="spectacle">
+            <img src="https://img.over-blog-kiwi.com/0/67/36/60/20181120/ob_d6163e_laposte-charles22.jpg" alt="cheval">
+            <img src="https://www.leparisien.fr/resizer/oJdkIxIWaW6YzF0luGoFSMm-MOk=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/AESTJH5H7SLKCQIH47XKUHLJW4.jpg" alt="fauves">
+            <img src="https://cdn-s-www.bienpublic.com/images/7D4651AE-3573-4B59-A53D-B6082336327C/NW_raw/l-illusion-et-les-arts-du-cirque-sont-au-coeur-du-show-qui-s-inscrit-dans-la-magie-de-noel-photos-dr-1416411318.jpg" alt="noel">
+        </div>
+    </section>
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+{% endblock %}
+

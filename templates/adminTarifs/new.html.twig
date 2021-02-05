@@ -1,0 +1,11 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Ajouter un Tarif{% endblock %}
+
+{% block body %}
+    <h1 class="text-primary text-center m-5">Ajouter un Tarif</h1>
+    <div class="container">
+        {{ include('adminTarifs/_form.html.twig') }}
+    </div>
+    <a class="btn btn-primary" href="{{ path('tarifs_index') }}">Retour</a>
+{% endblock %}

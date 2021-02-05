@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent () }} | Log in!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('connect') }}
+{% endblock %}
+
+{% block body %}
+    <section class="w-100 d-flex align-items-center">
+        <div class="connect container py-5 mb-5 mt-5">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+
+                <h1 class="text-center text-primary mb-5 reveal-1">Connexion</h1>
+                <p class="reveal-2">Pas encore de compte ? 😱 Bon bah clique par<a class="badge badge-primary ml-2 px-2 py-2" href="{{ path('app_register') }}">ICI</a></p>
+
+                <label class="text-primary" for="inputEmail">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
+                       required
+                       autofocus>
+                <label class="text-primary" for="inputPassword">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+                <div><a class="btn " href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a></div>
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+
+                {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+                #}
+
+                <button class="btn btn-outline-primary mt-2" type="submit">
+                    GO !
+                </button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

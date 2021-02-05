@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | {{ performance.name }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('performance') }}
+{% endblock %}
+
+{% block body %}
+    <div class="performance container">
+        <h1 class="text-center text-primary py-5">{{ performance.name }}</h1>
+
+        <div class="row mb-5 reveal-1">
+            <div class="image col-lg-6 reveal-2">
+                <img class="img-fluid mt-lg-5" src="{{ performance.image }}" alt="{{ performance.name }}">
+            </div>
+            <div class="col-lg-6 d-flex reveal-2">
+                <p class="text-left mt-lg-5">{{ performance.description }}</p>
+            </div>
+        </div>
+        {% if app.user %}
+            <div class="container mb-5">
+                <h2 class="text-center text-primary mt-5 mb-5">Avis client</h2>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <button class="btn btn-primary">Envoyer</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+        {% endif %}
+{% endblock %}
+{% block javascript %} {{ parent() }} {% endblock %}

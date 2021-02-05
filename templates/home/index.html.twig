@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Accueil {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block body %}
+    <div class="info py-5">
+        <div class="container">
+            <div class="jumbotron reveal-1">
+                <h1 class="display-4 text-primary mb-5 reveal-2">Bienvenue au Wild circus </h1>
+                <p class="lead reveal-3">Chers spectateurs, en raison de la crise sanitaire actuelle nous vous informons que nos
+                    representations sont maintenues mais dans le respect d'un protocole sanitaire bien precis.</p>
+                <hr class="my-4">
+                <p class="text-center text-primary reveal-3">Merci pour votre attention</p>
+            </div>
+        </div>
+    </div>
+    <div class="performances mb-5">
+        <div class="container-fluid">
+            <h1 class="text-center text-primary mt-5 reveal-1">Performances</h1>
+            <div class="row mx-0">
+                {% for performance in performances %}
+                    <div class="col-lg-3 mt-5 reveal-2">
+                        <div class="card">
+                            <img src="{{ performance.image }}" class="card-img-top" alt="{{ performance.name }}"
+                                 width="200px" height="200px">
+                            <div class="card-body reveal-3">
+                                <h5 class="card-title text-primary ">{{ performance.name }}</h5>
+                                <p class="card-text text-truncate">{{ performance.description }}</p>
+                                <a class="btn btn-outline-primary" href="{{ path('show', {'id': performance.id}) }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                    </svg>
+                                    En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <h1 class="text-center text-secondary py-5 reveal-1">Contactez-nous</h1>
+            <div class=" col giphy d-flex justify-content-center reveal-2">
+                <iframe src="https://giphy.com/embed/ZBoVzR5k102XjXRYol" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bbcamerica-season-3-bbc-america-killing-eve-ZBoVzR5k102XjXRYol"></a></p>
+            </div>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div class="col text-center pt-4 mr-xs-2 reveal-3">
+                <button class="btn btn-outline-secondary mb-2 ">
+                    Envoyer
+                </button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Mon compte {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('account') }}
+{% endblock %}
+
+{% block body %}
+    <section class="account d-flex align-items-center">
+        <div class="container">
+            <h1 class="text-primary text-center mb-5 reveal-1">Mon compte</h1>
+            <p class="text-center text-primary">Tu es connecté en tant que {{ app.user.username }}</p>
+            <div class="text-center"> <h2 class="text-center text-primary pt-5 mb-5 reveal-2">Vos
+                    réservations </h2>
+
+                    <p>Vous avez effectué {% for reservation in reservations %}{{ reservation|length }} reservation depuis la création de votre compte.</p>
+                {% else %}
+                    <p class="text-center text-primary">Aucune reservation effectuée</p>
+                {% endfor %}
+            </div>
+            <div class="text-center mb-2">
+                <a class="btn btn-outline-primary" href="{{ path('app_logout') }}">Déconnexion</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+{% endblock %}
