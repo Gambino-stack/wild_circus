@@ -32,7 +32,7 @@ Execute the following commands in your working folder to install the project:
 composer install
 yarn install
 
-# Create 'ideoz' DB
+# Create 'wild-circus' DB
 php bin/console doctrine:database:create
 
 # Execute migrations and create tables
