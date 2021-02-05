@@ -1,0 +1,18 @@
+@import "variables";
+
+.reservation {
+    display: flex;
+    background-image: url("../images/book.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+      .container {
+          padding: 20px;
+          border-radius: 10px;
+          align-self: center;
+          background-color: $light;
+      }
+}

@@ -1,0 +1,17 @@
+@import "variables.scss";
+.container-fluid {
+    background-image: url("../images/fuego.jpg");
+    background-color: $dark;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    .col-lg-6 {
+        margin-bottom: 10px;
+    }
+
+}

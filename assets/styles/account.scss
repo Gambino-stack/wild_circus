@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+.account {
+  min-height: 100vh;
+  background-color: $dark;
+  background-image: url("../images/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 200Px;
+}
+.container {
+  background-color: $light;
+  border-radius: 10px;
+}

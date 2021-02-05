@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+body {
+    background-color: $dark;
+}
+section {
+    min-height: 100vh;
+    background-image: url("../images/login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 200Px;
+}
+.connect {
+    background-color: $light;
+    border-radius: 10px;
+}

@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.info {
+  min-height: calc(100vh - 125px);
+  background-image: url("../images/circus.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+    .jumbotron {
+        border-radius: 10px;
+        margin-top: 150px;
+    }
+}
+
+.performances {
+  background-color: $light;
+  min-height: 100vh;
+      img {
+          width: 100%;
+          height: 250px;
+      }
+}
+
+.contact {
+  min-height: 100vh;
+  background-image: url("../images/chapiteau.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+    label {
+        color: $secondary;
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint){
+    section {
+      height: auto;
+    }
+
+  .info .jumbotron {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_js.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/app.css"
+      ]
+    },
+    "intersection": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_web_do-31add8.js",
+        "/build/intersection.js"
+      ]
+    },
+    "home": {
+      "js": [
+        "/build/runtime.js",
+        "/build/home.js"
+      ],
+      "css": [
+        "/build/home.css"
+      ]
+    },
+    "performance": {
+      "js": [
+        "/build/runtime.js",
+        "/build/performance.js"
+      ],
+      "css": [
+        "/build/performance.css"
+      ]
+    },
+    "tarifs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/tarifs.js"
+      ],
+      "css": [
+        "/build/tarifs.css"
+      ]
+    },
+    "connect": {
+      "js": [
+        "/build/runtime.js",
+        "/build/connect.js"
+      ],
+      "css": [
+        "/build/connect.css"
+      ]
+    },
+    "gallery": {
+      "js": [
+        "/build/runtime.js",
+        "/build/gallery.js"
+      ],
+      "css": [
+        "/build/gallery.css"
+      ]
+    },
+    "reservation": {
+      "js": [
+        "/build/runtime.js",
+        "/build/reservation.js"
+      ],
+      "css": [
+        "/build/reservation.css"
+      ]
+    },
+    "account": {
+      "js": [
+        "/build/runtime.js",
+        "/build/account.js"
+      ],
+      "css": [
+        "/build/account.css"
+      ]
+    }
+  }
+}

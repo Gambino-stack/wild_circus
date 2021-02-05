@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+
+.performance {
+
+    @media screen and (max-width: $mobile-breakpoint){
+          .image {
+              margin-bottom: 50px;
+          }
+    }
+}
+
