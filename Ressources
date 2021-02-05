@@ -1,0 +1,35 @@
+CHECKPOINT 4 
+REMAKE WILD CIRCUS 
+
+
+
+1/ COULEURS 
+
+		Couleur principale : #e42828;
+		Couleur secondaire : #ffec05;
+
+
+
+		
+2/ QUELQUES USER STORIES 
+	
+	1) En tant que visiteur ,je veux retrouver une navigation fluide entre les différentes parties du site , afin de m’y retrouver 
+	
+	2) En tant que visiteur , je veux pouvoir reserver des places pour la prochaine representation afin d’avoir deja mes places sur moi en arrivant
+	
+	3) En tant que visiteur je souhaite avoir des informations sur le contenu des representations afin de voir si cela me convient 
+	
+	4) En tant que visiteur je souhaite avoir accès aux tarifs , afin de comparer avec les autres cirques
+	5) En tant qu’admin je souhaite pouvoir modifier les différentes parties de mon site pour mettre a jour les informations . 
+
+
+3/ FONTS 
+	Text : @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+		font-family: 'Roboto', sans-serif;
+	titles :@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+		font-family: 'Mali', cursive;
+
+4/ WIREFRAME
+
+
+
